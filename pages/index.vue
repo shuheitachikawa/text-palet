@@ -113,8 +113,20 @@
 import axios from 'axios'
 
 export default {
+  async asyncData() {
+    const { data } = await axios.get(
+      'https://bubekiti.microcms.io/api/v1/image',
+      {
+        headers: { 'X-API-KEY': 'b99a477f-fdaa-43e0-8a72-de34af047371' },
+      }
+    )
+    return {
+      ogImage: data.image.url,
+    }
+  },
   data() {
     return {
+      ogImage: '',
       alert: true,
       loading: false,
       fail: false,
@@ -156,6 +168,14 @@ export default {
     },
     goTwitter() {},
   },
+  head() {
+    return {
+      meta: [
+        { property: 'og:image', content: this.ogImage },
+        { property: 'twitter:image', content: this.ogImage },
+      ],
+    }
+  },
 }
 </script>
 
@@ -186,6 +206,11 @@ export default {
 }
 @media screen and (max-width: 1600px) {
   .site-title {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .alert {
     display: none;
   }
 }

@@ -9,31 +9,54 @@ export default {
     titleTemplate: '%s',
     title: 'テキストパレット',
     htmlAttrs: {
-      lang: 'ja'
+      lang: 'ja',
+      prefix: 'og: http://ogp.me/ns#',
     },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: '' },
-      { name: 'description', content: '模写コーディング支援ツール。面倒なテキスト入稿は効率的にコピペしよう。' },
+      {
+        name: 'description',
+        content:
+          '模写コーディング支援ツール。面倒なテキスト入稿は効率的にコピペしよう。',
+      },
 
       { property: 'og:type', content: 'website' },
       { property: 'og:title', content: 'テキストパレット' },
-      { property: 'og:description', content: '模写コーディング支援ツール。面倒なテキスト入稿は効率的にコピペしよう。' },
-      { property: 'og:url', content: 'https://youthful-albattani-cc8d58.netlify.app' },
+      {
+        property: 'og:description',
+        content:
+          '模写コーディング支援ツール。面倒なテキスト入稿は効率的にコピペしよう。',
+      },
+      {
+        property: 'og:url',
+        content: 'https://youthful-albattani-cc8d58.netlify.app',
+      },
       { property: 'og:site_name', content: 'テキストパレット' },
-      { property: 'og:image', href: '/main.jpg' },
+      { property: 'og:image', content: '/main.jpg' },
 
       { name: 'twitter:card', content: 'summary_large_image' },
       { name: 'twitter:site', content: '@bubekiti' },
-      { name: 'twitter:domain', content: 'youthful-albattani-cc8d58.netlify.app' },
+      {
+        name: 'twitter:domain',
+        content: 'youthful-albattani-cc8d58.netlify.app',
+      },
       { name: 'twitter:title', content: 'テキストパレット' },
-      { name: 'twitter:description', content: '模写コーディング支援ツール。面倒なテキスト入稿は効率的にコピペしよう。' },
-      { property: 'twitter:image', href: '/main.jpg' },
+      {
+        name: 'twitter:description',
+        content:
+          '模写コーディング支援ツール。面倒なテキスト入稿は効率的にコピペしよう。',
+      },
+      { property: 'twitter:image', content: '/main.jpg' },
     ],
     link: [
       { rel: 'preconnect', href: 'https://fonts.gstatic.com' },
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Goldman:wght@700&family=Noto+Sans&display=swap' },
+      {
+        rel: 'stylesheet',
+        href:
+          'https://fonts.googleapis.com/css2?family=Goldman:wght@700&family=Noto+Sans&display=swap',
+      },
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' },
     ],
   },
