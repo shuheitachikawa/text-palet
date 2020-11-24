@@ -20,18 +20,22 @@ export default {
       { property: 'og:type', content: 'website' },
       { property: 'og:title', content: 'テキストパレット' },
       { property: 'og:description', content: 'Web制作学習支援ツール。面倒なテキスト入稿は効率的にコピペしよう。' },
-      { property: 'og:url', content: 'https://bubekiti.net' },
+      { property: 'og:url', content: 'https://youthful-albattani-cc8d58.netlify.app' },
       { property: 'og:site_name', content: 'テキストパレット' },
       { property: 'og:image', content: '/main.jpg' },
 
       { name: 'twitter:card', content: 'summary_large_image' },
       { name: 'twitter:site', content: '@bubekiti' },
-      { name: 'twitter:domain', content: 'bubekiti.net' },
+      { name: 'twitter:domain', content: 'youthful-albattani-cc8d58.netlify.app' },
       { name: 'twitter:title', content: 'テキストパレット' },
       { name: 'twitter:description', content: 'Web制作学習支援ツール。面倒なテキスト入稿は効率的にコピペしよう。' },
       { property: 'twitter:image', content: '/main.jpg' },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.png' }],
+    link: [
+      { rel: 'preconnect', href: 'https://fonts.gstatic.com' },
+      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Goldman:wght@700&family=Noto+Sans&display=swap' },
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' },
+    ],
   },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)

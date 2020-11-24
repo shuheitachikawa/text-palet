@@ -1,6 +1,7 @@
 <template>
   <div>
     <v-app-bar fixed app height="100px">
+      <h1 class="site-title">テキストパレット</h1>
       <v-form
         class="d-flex align-center mx-auto"
         style="width: 100%; max-width: 1100px"
@@ -83,6 +84,22 @@
             </tbody>
           </template>
         </v-simple-table>
+        <a
+          href="https://twitter.com/intent/tweet?text=テキストパレット%20模写コーディングで役立つテキストコピペツール&url=https://youthful-albattani-cc8d58.netlify.app/"
+          target="_brank"
+          class="alert"
+        >
+          <v-alert
+            v-model="alert"
+            color="cyan"
+            border="left"
+            elevation="2"
+            colored-border
+            icon="mdi-twitter"
+          >
+            Twitterで共有
+          </v-alert>
+        </a>
       </v-container>
 
       <v-alert v-if="fail" border="top" color="red lighten-2" dark>
@@ -98,6 +115,7 @@ import axios from 'axios'
 export default {
   data() {
     return {
+      alert: true,
       loading: false,
       fail: false,
       title: 'Vuetify.js',
@@ -136,6 +154,7 @@ export default {
         this.loading = false
       }
     },
+    goTwitter() {},
   },
 }
 </script>
@@ -151,5 +170,23 @@ export default {
   transform: translate(-50%, -50%);
   width: 90%;
   max-width: 1200px;
+}
+.site-title {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 1.5rem;
+  position: absolute;
+  left: 30px;
+}
+.alert {
+  width: 200px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  text-decoration: none;
+}
+@media screen and (max-width: 1600px) {
+  .site-title {
+    display: none;
+  }
 }
 </style>
