@@ -1,7 +1,7 @@
 <template>
   <div>
     <v-app-bar fixed app height="100px">
-      <h1 class="site-title">テキストパレット</h1>
+      <h1 class="site-title" @click="back">テキストパレット</h1>
       <v-form
         class="d-flex align-center mx-auto"
         style="width: 100%; max-width: 1100px"
@@ -168,7 +168,10 @@ export default {
         this.loading = false
       }
     },
-    goTwitter() {},
+    back() {
+      this.sldShow = true
+      this.fail = false
+    },
   },
   head() {
     return {
@@ -205,6 +208,9 @@ export default {
   bottom: 30px;
   right: 30px;
   text-decoration: none;
+}
+h1:hover {
+  cursor: pointer;
 }
 @media screen and (max-width: 1600px) {
   .site-title {
