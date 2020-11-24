@@ -86,7 +86,7 @@
           </template>
         </v-simple-table>
         <a
-          href="https://twitter.com/intent/tweet?text=テキストパレット|%20模写コーディングで役立つテキストコピペツール&url=https://youthful-albattani-cc8d58.netlify.app"
+          href="https://twitter.com/intent/tweet?text=テキストパレット%20%20模写コーディングで役立つテキストコピペツール&url=https://youthful-albattani-cc8d58.netlify.app/"
           target="_brank"
           class="alert"
         >
