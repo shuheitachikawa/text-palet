@@ -15,7 +15,7 @@ def lambda_handler(event, context):
     print(plainText)
     
     requests.post(
-        'https://hooks.slack.com/services/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', 
+        'URLを入力', 
         data=json.dumps({'text':url})
     )
 
@@ -24,7 +24,7 @@ def lambda_handler(event, context):
         'statusCode': 200,
         'headers': {
             'Access-Control-Allow-Headers': 'Content-Type',
-            'Access-Control-Allow-Origin': 'http://localhost:3000',
+            'Access-Control-Allow-Origin': 'ホストURLを入力',
             'Access-Control-Allow-Methods': 'GET'
         },
         'body': json.dumps(plainText)
