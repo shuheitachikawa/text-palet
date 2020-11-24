@@ -150,6 +150,7 @@ export default {
     async get() {
       if (!this.$refs.form.validate()) return
       this.loading = true
+      this.fail = false
       try {
         const { data } = await axios.get(
           `https://7s54krtiai.execute-api.ap-northeast-1.amazonaws.com/default/pythontest?url=${this.url}`
