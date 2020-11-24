@@ -8,6 +8,7 @@
         ref="form"
       >
         <v-text-field
+          v-on:keydown.enter.prevent="get"
           v-model="url"
           width="50px"
           class="mt-8"
